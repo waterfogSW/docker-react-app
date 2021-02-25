@@ -10,7 +10,7 @@ before_install:
   - docker build -t waterfogsw/docker-react-app -f Dockerfile.dev .
 
 script:
-  - docker run -e C =true waterfogsw/docker-react-app npm run test -- --converage
+  - docker run -e CI=true waterfogsw/docker-react-app npm run test -- --converage
 
 after_success:
   - echo "Test success"
